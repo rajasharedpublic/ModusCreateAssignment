@@ -1,4 +1,5 @@
 bundle install --path vendor/bundle
+brew install geckodriver
 
 /*
 Here is the task

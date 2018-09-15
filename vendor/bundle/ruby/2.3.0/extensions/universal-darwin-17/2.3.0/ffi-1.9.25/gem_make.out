@@ -1,5 +1,5 @@
 current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
-/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180914-42996-10cfqia.rb extconf.rb
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180915-61974-114e7ja.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
 checking for ffi_call() in -lffi... yes

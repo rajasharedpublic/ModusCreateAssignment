@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="739834d4-83a6-420f-a456-4d73a7159dfb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="739834d4-83a6-420f-a456-4d73a7159dfb" name="Default" comment="Initial Branch">
+      <change afterPath="$PROJECT_DIR$/externalJars/Mac/geckodriverv0.21.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Work.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Linux/2.30/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Linux/2.37/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Linux/2.38/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Linux/2.40/chromedriver_li" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Linux/gecko/geckodriver_li" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalJars/Mac/geckodriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/features/support/my_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/projects/features/support/my_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/ffi-1.9.25/gem_make.out" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/ffi-1.9.25/gem_make.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/ffi-1.9.25/mkmf.log" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/ffi-1.9.25/mkmf.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi-i386/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi-i386/config.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,19 +35,42 @@
     <SUITE FILE_PATH="coverage/cucumber@Scenario__Verify_that_adhoc_scenario__3_.rcov" NAME="Scenario: Verify that adhoc scenario (3) Coverage Results" MODIFIED="1536641426995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/social" MODULE_NAME="cucumber" />
     <SUITE FILE_PATH="coverage/cucumber@Scenario__Verify_that_customer_can_submit_the_review_in_sequence__happy_sad__for_CAR__1_.rcov" NAME="Scenario: Verify that customer can submit the review in sequence &quot;happy-sad&quot; for CAR (1) Coverage Results" MODIFIED="1536647930671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/social" MODULE_NAME="cucumber" />
     <SUITE FILE_PATH="coverage/cucumber@Scenario__Verify_that_adhoc_scenario__4_.rcov" NAME="Scenario: Verify that adhoc scenario (4) Coverage Results" MODIFIED="1536645379611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/social" MODULE_NAME="cucumber" />
-    <SUITE FILE_PATH="coverage/cucumber@Run_test__my_test___cucumber.rcov" NAME="Run test 'my_test': cucumber Coverage Results" MODIFIED="1536996370567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Work" />
+    <SUITE FILE_PATH="coverage/cucumber@Run_test__my_test___cucumber.rcov" NAME="Run test 'my_test': cucumber Coverage Results" MODIFIED="1537003148307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Work" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="my_test.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects/features/support/my_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="98" column="20" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-              <folding>
-                <element signature="e#607#1397#0" />
-                <element signature="e#1403#2006#0" />
-              </folding>
+            <state relative-caret-position="334">
+              <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fixture.rb" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Ruby/Gems/2.3.0/gems/test-unit-3.2.8/lib/test/unit/fixture.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="269" selection-start-line="269" selection-end-line="269" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testcase.rb" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Ruby/Gems/2.3.0/gems/test-unit-3.2.8/lib/test/unit/testcase.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="519" selection-start-line="519" selection-end-line="519" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -74,6 +112,7 @@
         <option value="$PROJECT_DIR$/projects/readme.md" />
         <option value="$PROJECT_DIR$/projects/social/features/page_objects/Upwork.rb" />
         <option value="$PROJECT_DIR$/projects/social/features/support/my_test.rb" />
+        <option value="$PROJECT_DIR$/projects/Readme.md" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/projects/features/support/my_test.rb" />
       </list>
@@ -106,6 +145,17 @@
             <path>
               <item name="cucumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="cucumber" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cucumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cucumber" type="462c0819:PsiDirectoryNode" />
+              <item name="externalJars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cucumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cucumber" type="462c0819:PsiDirectoryNode" />
+              <item name="externalJars" type="462c0819:PsiDirectoryNode" />
+              <item name="Mac" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cucumber" type="b2602c69:ProjectViewProjectNode" />
@@ -390,50 +440,52 @@
       <updated>1536559384629</updated>
       <workItem from="1536559386281" duration="12602000" />
       <workItem from="1536923866540" duration="432000" />
-      <workItem from="1536924552655" duration="24377000" />
+      <workItem from="1536924552655" duration="28479000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 11h 57m 27s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 40m 12s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 05m 17s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 41m 17s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 09m 07s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 42m 40s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 23m 08s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 43m 55s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 29m 50s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 44m 21s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 36m 48s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 45m 27s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 41m 01s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 46m 35s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 44m 18s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 46m 59s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 55m 39s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 47m 36s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 12h 57m 28s.xml">
+    <history-entry file="Run_test_'my_test'__cucumber - 2018.09.15 at 14h 50m 11s.xml">
       <configuration name="Run test 'my_test': cucumber" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37411000" />
+    <option name="totallyTimeSpent" value="41513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32948717" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -442,7 +494,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32948717" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
@@ -452,7 +504,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24964234" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -471,34 +523,41 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Initial Branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/projects/features/support/my_test.rb</url>
-          <line>92</line>
-          <option name="timeStamp" value="39" />
+          <line>31</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/projects/features/support/my_test.rb</url>
-          <line>109</line>
-          <option name="timeStamp" value="47" />
+          <line>29</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/projects/features/support/my_test.rb</url>
-          <line>115</line>
-          <option name="timeStamp" value="48" />
+          <line>27</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="51" />
+      <option name="time" value="64" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ENV['PATH']</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>freelance_skillset</expression-string>
         <language-id>ruby</language-id>
@@ -539,15 +598,9 @@
         <language-id>ruby</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>return  @browser.element(:xapth,'&quot;(//div//input[@placeholder=\'Find Freelancers\'])[3]&quot;')</expression-string>
-        <language-id>ruby</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projects/social/features/step_definitions/wotif_created_steps.rb" />
     <entry file="file://$PROJECT_DIR$/projects/social/features/page_objects/email_page.rb" />
     <entry file="file://$PROJECT_DIR$/projects/social/features/Domain/hotel_data.rb" />
     <entry file="file://$PROJECT_DIR$/projects/social/features/Domain/flight_data.rb" />
@@ -640,23 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/test-unit-3.2.8/lib/test/unit/testcase.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="512" selection-start-line="512" selection-end-line="512" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/test-unit-3.2.8/lib/test/unit/fixture.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="255" column="11" selection-start-line="255" selection-start-column="11" selection-end-line="255" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_PLUGINS_DIR$/ruby/rubystubs/rubystubs23/class.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -667,22 +703,12 @@
     <entry file="file://$PROJECT_DIR$/projects/social/features/support/Upwork.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///Library/Ruby/Gems/2.3.0/gems/test-unit-3.2.8/lib/test/unit/fixture.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2882">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Ruby/Gems/2.3.0/gems/selenium-webdriver-3.14.0/lib/selenium/webdriver/common/element.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="153" selection-start-line="153" selection-end-line="153" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Work.iml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/social/features/TestCase.feature">
       <provider selected="true" editor-type-id="text-editor">
@@ -734,6 +760,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Work.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/test-unit-3.2.8/lib/test/unit/testcase.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="512" selection-start-line="512" selection-end-line="512" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="61" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projects/features/page_objects/Upwork.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -741,38 +794,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="107">
-            <caret line="15" column="145" selection-start-line="15" selection-start-column="145" selection-end-line="15" selection-end-column="159" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.3.0/gems/test-unit-3.2.8/lib/test/unit/fixture.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="278" selection-start-line="278" selection-end-line="278" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        <state relative-caret-position="195">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Ruby/Gems/2.3.0/gems/test-unit-3.2.8/lib/test/unit/fixture.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="269" selection-start-line="269" selection-end-line="269" />
         </state>
       </provider>
     </entry>
     <entry file="file:///Library/Ruby/Gems/2.3.0/gems/test-unit-3.2.8/lib/test/unit/testcase.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="502" selection-start-line="502" selection-end-line="502" />
+          <caret line="519" selection-start-line="519" selection-end-line="519" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/features/support/my_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="98" column="20" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding>
-            <element signature="e#607#1397#0" />
-            <element signature="e#1403#2006#0" />
-          </folding>
+        <state relative-caret-position="334">
+          <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
         </state>
       </provider>
     </entry>

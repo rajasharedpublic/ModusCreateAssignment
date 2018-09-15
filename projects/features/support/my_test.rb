@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'selenium-webdriver'
-require './projects/social/features/page_objects/Upwork.rb'
+require './projects/features/page_objects/Upwork.rb'
 
 
 class MyTest < Test::Unit::TestCase
@@ -10,7 +10,7 @@ class MyTest < Test::Unit::TestCase
   def setup
 
     #define driver for firefox webdriver
-    # Tested on Mac with Firefox, given chrome option for later integration
+    # Tested on Mac with Firefox, Given chrome Option for later integration if any
     @browser_value = 'firefox'
 
     if(@browser_value == "firefox")
@@ -18,13 +18,15 @@ class MyTest < Test::Unit::TestCase
 
       http_client = Selenium::WebDriver::Remote::Http::Default.new
 
-      #capabilities        = Selenium::WebDriver::Remote::Capabilities.firefox(accept_insecure_certs: true)
+      #capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(accept_insecure_certs: true)
       capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(marionette: true)
       capabilities['acceptInsecureCerts']=true
       profile  = Selenium::WebDriver::Firefox::Profile.new
 
+
       #brew install geckodriver
-      ENV['PATH'] = File.expand_path File.join(File.dirname(__FILE__), '../../../..', 'externalJars/Mac', 'geckodriver', "#{ENV['PATH']}"  )
+      ENV['PATH'] = File.expand_path File.join(File.dirname(__FILE__), '../../..', 'externalJars/Mac', 'geckodriverv0.21.0', "#{ENV['PATH']}"  )
+      #ENV['PATH'] = File.expand_path File.join(File.dirname(__FILE__), '../../..', 'externalJars/Mac', 'geckodriver'  )
       @driver = Selenium::WebDriver.for :firefox, :profile => profile, marionette: true, :desired_capabilities => capabilities, :http_client => http_client
 
       puts 'Mozilla Firefox Browser Opened ..'
@@ -37,11 +39,10 @@ class MyTest < Test::Unit::TestCase
       profile = Selenium::WebDriver::Chrome::Profile.new
 
       #MAC
-      Selenium::WebDriver::Chrome.driver_path = File.expand_path File.join(File.dirname(__FILE__), '../../../..', 'externalJars/Mac', 'chromedriver_mac')
+      Selenium::WebDriver::Chrome.driver_path = File.expand_path File.join(File.dirname(__FILE__), '../../..', 'externalJars/Mac', 'chromedriver_mac')
       @driver = Selenium::WebDriver.for :chrome, :profile => profile, :desired_capabilities => capabilities, :http_client => http_client
       puts 'Chrome Browser Opened ..'
     end
-
 
     #maximize the window
     @driver.manage.window.maximize
@@ -71,35 +72,7 @@ class MyTest < Test::Unit::TestCase
      puts 'Waiting for Page to Load for searching the results '
      wait.until {@Upwork.headerToApear}
 
-
-    #
-    # Parse the 1st page with search results:
-    #array_of_hashes = []
-    #array_of_arrays.each { array_of_hashes << {'@Title' => @Upwork.title_fl.attribute('title'), '@Overview' => @Upwork.overview.text, '@Skills' => @Upwork.skills.text} }
-
-
-
-
-
-    #puts  array_of_hashes
-
-=begin
-    @Title = @Upwork.title_fl(i).attribute('title')
-     #puts @Title
-
-     @Overview = @Upwork.overview(i).text
-
-     @Skills = @Upwork.skills(i).text
-=end
-
-=begin
-    tagHashes = []
-    tag_names.each do |tag|
-      h = {"tagId" => tag}
-      tagHashes << h
-    end
-=end
-
+     puts 'Displaying Freelance Skillset'
     h= {}
     skills_ds = []
 
@@ -121,12 +94,19 @@ class MyTest < Test::Unit::TestCase
     end
 
     #Clicking on Freelance photograph
+
     @Upwork.photo.click
+    puts 'Going into Freelancer Profile'
+
 
     #Validating the Title and overview Stored in Hash which have been collection above
+
     assert_equal(@Title, @Upwork.matched_name.text)
+    puts 'Checking that each attribute value is equal to one of those stored in the structure created'
 
     assert_equal(@Overview, @Upwork.matched_overview.text)
+    puts 'Checking whether at least one attribute contains `<keyword>`'
+
 
 
   end
