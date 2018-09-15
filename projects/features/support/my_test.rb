@@ -7,11 +7,15 @@ class MyTest < Test::Unit::TestCase
 
   # Called before every test method runs. Can be used
   # to set up fixture information.
+
+
   def setup
+
+
+    @browser_value = 'firefox'
 
     #define driver for firefox webdriver
     # Tested on Mac with Firefox, Given chrome Option for later integration if any
-    @browser_value = 'firefox'
 
     if(@browser_value == "firefox")
 
@@ -45,6 +49,8 @@ class MyTest < Test::Unit::TestCase
     end
 
     #maximize the window
+    @driver.manage.delete_all_cookies
+    puts 'Deleting all cookies'
     @driver.manage.window.maximize
     @driver.manage.timeouts.implicit_wait = 30
 
@@ -59,7 +65,7 @@ class MyTest < Test::Unit::TestCase
      @Upwork = Upwork.new(@driver)
 
     #Waiting to Page to be loaded and for Search to visible to Webdriver for 10 seconds
-    wait = Selenium::WebDriver::Wait.new(:timeout => 30) # seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
     wait.until {@Upwork.searchbar}
 
 
@@ -73,25 +79,34 @@ class MyTest < Test::Unit::TestCase
      wait.until {@Upwork.headerToApear}
 
      puts 'Displaying Freelance Skillset'
-    h= {}
+
+     #storing info given on the 1st page of search results
+
     skills_ds = []
+     freelance_skillset={}
 
-    x = [1, 2, 3, 4, 5 , 6, 7, 8 , 9 , 10]
-    x.each do |i|
+    size = @Upwork.SectionSize.size
 
-      j = [1, 2, 3, 4]
-        j.each do |n|
-        skills_i = @Upwork.skillsIJ(i,n).text
-        #skills_i = {Skills: @Upwork.skills(i).text}
-        skills_ds << skills_i
-      end
+     begin
+       for i in (1...size)
 
-      freelance_skillset = {Freelance_Details: {Title: @Upwork.title_fl(i).attribute('title'), Overview: @Upwork.overview(i).text, Skills: skills_ds}}
-      skills_ds = []
+         #In case no No skills are available with General pattern, Exception handing is done
+         begin
+           limit = 4
+           for n in (1...limit)
+             skills_i = @Upwork.skillsIJ(i,n).text
+             skills_ds << skills_i
+           end
+         rescue Exception => e
+         end
 
-      puts freelance_skillset, "\n"
+         freelance_skillset = {Freelance_Details: {Title: @Upwork.title_fl(i).attribute('title'), Overview: @Upwork.overview(i).text, Skills: skills_ds}}
+         skills_ds = []
+         puts freelance_skillset, "\n"
 
-    end
+       end
+       rescue Exception => e
+     end
 
     #Clicking on Freelance photograph
 
@@ -101,18 +116,17 @@ class MyTest < Test::Unit::TestCase
 
     #Validating the Title and overview Stored in Hash which have been collection above
 
-    assert_equal(@Title, @Upwork.matched_name.text)
+    assert_equal(freelance_skillset[:Freelance_Details][:Title], @Upwork.matched_name.text)
     puts 'Checking that each attribute value is equal to one of those stored in the structure created'
 
-    assert_equal(@Overview, @Upwork.matched_overview.text)
+    assert_equal(freelance_skillset[:Freelance_Details][:Overview], @Upwork.matched_overview.text)
     puts 'Checking whether at least one attribute contains `<keyword>`'
-
-
 
   end
 
   def teardown
-    #quit the driver
+    puts 'Closing the Browser'
+    #@driver.quit
     @driver.close
   end
 

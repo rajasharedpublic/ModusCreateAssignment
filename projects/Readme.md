@@ -1,5 +1,10 @@
+Ruby Version - 1.8 Used
+
+To Run the testcase, on terminal, Enter below
+
 bundle install --path vendor/bundle
 brew install geckodriver
+
 
 /*
 Here is the task
@@ -31,5 +36,7 @@ Here is the task
 6. Names of the elements described in the test case can differ from what you can see on the site. The site is constantly evolving. But the idea and the flow is the same
 
 */
+
+
 
 

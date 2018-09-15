@@ -8,7 +8,7 @@ source "http://rubygems.org"
 # Install on terminal which this command
 # bundle install --path vendor/bundle
 
-#gem "selenium-webdriver", "3.4.1"
-gem "selenium-webdriver", "3.14.0"
+gem "selenium-webdriver", "3.4.1"
+#gem "selenium-webdriver", "3.14.0"
 gem 'test-unit' #10th Point(Assignment, refer Readme.md file) need to cover with this.
 gem "ffi", "1.9.18" # If in case some interdependent file gives error
