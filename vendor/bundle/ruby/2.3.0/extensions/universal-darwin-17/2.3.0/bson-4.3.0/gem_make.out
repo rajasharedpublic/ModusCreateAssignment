@@ -1,0 +1,47 @@
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/bson-4.3.0/ext/bson
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180910-12700-q4kt1r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/bson-4.3.0/ext/bson
+make "DESTDIR=" clean
+
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/bson-4.3.0/ext/bson
+make "DESTDIR="
+compiling bson_native.c
+In file included from bson_native.c:21:
+./native-endian.h:124:17: warning: unused function '__bson_uint16_swap_slow' [-Wunused-function]
+static uint16_t __bson_uint16_swap_slow(uint16_t v)
+                ^
+./native-endian.h:145:17: warning: unused function '__bson_uint32_swap_slow' [-Wunused-function]
+static uint32_t __bson_uint32_swap_slow(uint32_t v)
+                ^
+./native-endian.h:169:17: warning: unused function '__bson_uint64_swap_slow' [-Wunused-function]
+static uint64_t __bson_uint64_swap_slow(uint64_t v)
+                ^
+./native-endian.h:196:15: warning: unused function '__bson_double_swap_slow' [-Wunused-function]
+static double __bson_double_swap_slow(double v)
+              ^
+4 warnings generated.
+In file included from bson_native.c:21:
+./native-endian.h:124:17: warning: unused function '__bson_uint16_swap_slow' [-Wunused-function]
+static uint16_t __bson_uint16_swap_slow(uint16_t v)
+                ^
+./native-endian.h:145:17: warning: unused function '__bson_uint32_swap_slow' [-Wunused-function]
+static uint32_t __bson_uint32_swap_slow(uint32_t v)
+                ^
+./native-endian.h:169:17: warning: unused function '__bson_uint64_swap_slow' [-Wunused-function]
+static uint64_t __bson_uint64_swap_slow(uint64_t v)
+                ^
+./native-endian.h:196:15: warning: unused function '__bson_double_swap_slow' [-Wunused-function]
+static double __bson_double_swap_slow(double v)
+              ^
+4 warnings generated.
+linking shared-object bson_native.bundle
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/bson-4.3.0/ext/bson
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bson_native.bundle ./.gem.20180910-12700-1w5o7e7

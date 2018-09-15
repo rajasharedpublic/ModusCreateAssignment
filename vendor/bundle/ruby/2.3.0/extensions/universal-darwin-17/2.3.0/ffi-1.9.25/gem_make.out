@@ -1,0 +1,40 @@
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180914-42996-10cfqia.rb extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
+checking for ffi_call() in -lffi... yes
+checking for ffi_closure_alloc()... no
+checking for ffi_raw_call()... no
+checking for shlwapi.h... no
+checking for ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+creating extconf.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/ffi-1.9.25/mkmf.log
+
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR=" clean
+libffi.darwin.mk:75: warning: overriding commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:71: warning: ignoring old commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:80: warning: overriding commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:75: warning: ignoring old commands for target `"/Users/rathakur/Desktop/untitled'
+
+current directory: /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR="
+libffi.darwin.mk:75: warning: overriding commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:71: warning: ignoring old commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:80: warning: overriding commands for target `"/Users/rathakur/Desktop/untitled'
+libffi.darwin.mk:75: warning: ignoring old commands for target `"/Users/rathakur/Desktop/untitled'
+make: Circular "/Users/rathakur/Desktop/untitled <- "/Users/rathakur/Desktop/untitled dependency dropped.
+mkdir -p "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c"/libffi-i386; (if [ ! -f "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi"/configure ]; then echo "Running autoreconf for libffi"; cd "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi" && /bin/sh /Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi/autogen.sh > /dev/null; fi); (if [ ! -f "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c"/libffi-i386/Makefile ]; then echo "Configuring libffi for i386"; cd "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c"/libffi-i386 && env CC=" xcrun clang" CFLAGS="-arch i386 " LDFLAGS="-arch i386" "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi"/configure --disable-static --with-pic=yes --disable-dependency-tracking --disable-docs --host=i386-apple-darwin > /dev/null; fi); env MACOSX_DEPLOYMENT_TARGET=10.4 /Library/Developer/CommandLineTools/usr/bin/make -C "/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c"/libffi-i386
+Configuring libffi for i386
+configure: error: unsafe srcdir value: '/Users/rathakur/Desktop/untitled folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/libffi'
+make[1]: *** No targets specified and no makefile found.  Stop.
+make: *** [folder/cucumber/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c"/libffi-i386/.libs/libffi_convenience.a] Error 2
+
+make failed, exit code 2

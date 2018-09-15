@@ -1,0 +1,127 @@
+# Desktop size sources
+# http://www.hobo-web.co.uk/best-screen-size/
+# https://en.wikipedia.org/wiki/Display_resolution#Common_display_resolutions
+# http://www.w3schools.com/browsers/browsers_display.asp
+:desktop:
+   :user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"
+   :portrait:
+     :width: 768
+     :height: 1024
+   :landscape:
+     :width: 1366
+     :height: 768
+:iphone_default: &iphone_default
+   :user_agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1"
+   :portrait:
+     :width: 375
+     :height: 635
+   :landscape:
+     :width: 724
+     :height: 375
+:iphone: &iphone
+   <<: *iphone_default
+:iphonex:
+  <<: *iphone_default
+:iphone8plus: &iphone8plus
+  <<: *iphone_default
+  :portrait:
+    :width: 414
+    :height: 622
+  :landscape:
+    :width: 736
+    :height: 414
+:iphone8: &iphone8
+  <<: *iphone_default
+  :portrait:
+    :width: 375
+    :height: 553
+  :landscape:
+    :width: 667
+    :height: 375
+:iphone7plus:
+  <<: *iphone8plus
+:iphone7:
+  <<: *iphone8
+  :portrait:
+:iphone6splus:
+  <<: *iphone8plus
+:iphone6s:
+  <<: *iphone8
+:iphone6plus:
+  <<: *iphone8plus
+:iphone6:
+  <<: *iphone8
+:iphone5s: &iphone5s
+  <<: *iphone_default
+  :portrait:
+    :width: 320
+    :height: 454
+  :landscape:
+    :width: 568
+    :height: 320
+:iphonese:
+  <<: *iphone5s
+:iphone5:
+  <<: *iphone5s
+:iphone4s: &iphone4s
+  <<: *iphone_default
+  :portrait:
+    :width: 320
+    :height: 356
+  :landscape:
+    :width: 480
+    :height: 196
+:iphone4:
+  <<: *iphone4s
+:ipad: &ipad
+  :user_agent: "Mozilla/5.0 (iPad; CPU OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1"
+  :portrait:
+    :width: 768
+    :height: 954
+  :landscape:
+    :width: 1024
+    :height: 698
+:ipad_default:
+  <<: *ipad
+:ipad_pro: &ipad_pro
+  <<: *ipad
+  :portrait:
+    :width: 1024
+    :height: 1296
+  :landscape:
+    :width: 1366
+    :height: 954
+:ipad_pro_12:
+  <<: *ipad_pro
+:ipad_pro_10:
+  <<: *ipad
+  :portrait:
+    :width: 834
+    :height: 1042
+  :landscape:
+    :width: 1112
+    :height: 764
+:ipad_pro_9:
+  <<: *ipad
+  :portrait:
+    :width: 768
+    :height: 954
+  :landscape:
+    :width: 1024
+    :height: 698
+:android_phone:
+  :user_agent: "Mozilla/5.0 (Linux; U; Android 4.0.1; en-us; sdk Build/ICS_MR0) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+  :portrait:
+    :width: 320
+    :height: 356
+  :landscape:
+    :width: 480
+    :height: 196
+:android_tablet:
+  :user_agent: "Mozilla/5.0 (Linux; U; Android 3.0; en-us; GT-P7100 Build/HRI83) AppleWebkit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13"
+  :portrait:
+    :width: 768
+    :height: 946
+  :landscape:
+    :width: 1024
+    :height: 690
