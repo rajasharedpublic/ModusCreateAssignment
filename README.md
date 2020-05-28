@@ -1,42 +1,47 @@
-Ruby Version - 1.8 Used
+Ruby Version - 2.7 Used
 
 To Run the testcase, on terminal, Enter below
 
 bundle install --path vendor/bundle
-brew install geckodriver
+brew install geckodriver(In case planning to use firefox)
 
+All test cases have been verified on chrome browser
 
 /*
-Here is the task
 *Tools:*
 1. Ruby
-2. Selenium Webdriver (only this one gem should used, no other ones)
-3. Git/Github to place your work there
+2. Selenium Webdriver 
 
-*Test case*
+*Test Cases*
+
+Test 1: test_verifying_adding_records
+Steps 
 1. Run `<browser>`
 2. Clear `<browser>` cookies
-3. Go to www.upwork.com
-4. Focus onto "Find freelancers"
-5. Enter `<keyword>` into the search input right from the dropdown and submit it (click on the magnifying glass button)
-6. Parse the 1st page with search results: store info given on the 1st page of search results as structured data of any chosen by you type (i.e. hash of hashes or array of hashes, whatever structure handy to be parsed).
-7. Make sure at least one attribute (title, overview, skills, etc) of each item (found freelancer) from parsed search results contains `<keyword>` Log in stdout which freelancers and attributes contain `<keyword>` and which do not.
-8. Click on random freelancer's title
-9. Get into that freelancer's profile
-10. Check that each attribute value is equal to one of those stored in the structure created in #67
-11. Check whether at least one attribute contains `<keyword>`
+3. Go to url- https://budget.modus.app/budget or setup code on local
+4. Wait for page to open
+5. Enter test records and verify its been added
 
-*Requirements:*
-1. Browser and `<keyword>` should be configurable. The test should run with any combination of them.
-2. Imagine that this is not such a simple tiny task, but a big scalable project which can be extended. Hence, implement appropriate OOP model/approach.
-3. Prove model/approach chosen.
-4. Every action, every comparison result, etc should be logged accordingly (i.e. to stdout). Goal: when your script passes - detailed test-case steps should be logged into STDOUT, so anybody can read it and repeat exactly the same steps and verifications but manually.
-5. Your code should be well commented, so anybody can easily find out what action is being performed there and what is the purpose of those code blocks/methods/etc.
+Test 2: test_verifying_working_balance
+Steps 
+1. Run `<browser>`
+2. Clear `<browser>` cookies
+3. Go to url- https://budget.modus.app/budget or setup code on local
+4. Wait for page to open
+5. verify working_balance is calculated correctly which is the difference of total_inflow - total_outflow
 
-6. Names of the elements described in the test case can differ from what you can see on the site. The site is constantly evolving. But the idea and the flow is the same
+Test 3: test_verifying_working_balance_failed_case
+Steps 
+1. Run `<browser>`
+2. Clear `<browser>` cookies
+3. Go to url- https://budget.modus.app/budget or setup code on local
+4. Wait for page to open
+5. verifying fail case that working_balance checked shows incorrect result in test_execution which is the addition instead of substraction of total_inflow - total_outflow
+
+
+test result folder
+~/results
+
 
 */
-
-
-
 

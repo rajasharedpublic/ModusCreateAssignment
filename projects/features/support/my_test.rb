@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'selenium-webdriver'
-require './projects/features/page_objects/Upwork.rb'
-
+require './projects/features/page_objects/ModusCreateApp.rb'
 
 class MyTest < Test::Unit::TestCase
 
@@ -12,10 +11,10 @@ class MyTest < Test::Unit::TestCase
   def setup
 
 
-    @browser_value = 'firefox'
+    @browser_value = 'Chrome'
 
     #define driver for firefox webdriver
-    # Tested on Mac with Firefox, Given chrome Option for later integration if any
+    # Tested on Mac with Chrome, Given Firefox Option for later integration if required.
 
     if(@browser_value == "firefox")
 
@@ -34,6 +33,8 @@ class MyTest < Test::Unit::TestCase
       @driver = Selenium::WebDriver.for :firefox, :profile => profile, marionette: true, :desired_capabilities => capabilities, :http_client => http_client
 
       puts 'Mozilla Firefox Browser Opened ..'
+
+
     end
 
     if(@browser_value == "Chrome")
@@ -42,8 +43,9 @@ class MyTest < Test::Unit::TestCase
       capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
       profile = Selenium::WebDriver::Chrome::Profile.new
 
+
       #MAC
-      Selenium::WebDriver::Chrome.driver_path = File.expand_path File.join(File.dirname(__FILE__), '../../..', 'externalJars/Mac', 'chromedriver_mac')
+      Selenium::WebDriver::Chrome.driver_path = File.expand_path File.join(File.dirname(__FILE__), '../..', 'externalJars/Mac', 'chromedriver')
       @driver = Selenium::WebDriver.for :chrome, :profile => profile, :desired_capabilities => capabilities, :http_client => http_client
       puts 'Chrome Browser Opened ..'
     end
@@ -54,73 +56,62 @@ class MyTest < Test::Unit::TestCase
     @driver.manage.window.maximize
     @driver.manage.timeouts.implicit_wait = 30
 
-    #navigate to the upwork site
-    @driver.navigate.to "https://www.upwork.com"
-    puts 'Navigated to https://www.upwork.com '
+    #navigate to the budget modus app site
+    @driver.navigate.to "https://budget.modus.app/budget"
+    puts 'Navigated to budget modus app'
   end
 
-  def test_login
+  def test_verifying_adding_records
 
-    #Created object to Interact with Upwork Page Object
-     @Upwork = Upwork.new(@driver)
+    #Created object to Interact with ModusCreateApp Page Object
+     @ModusCreateApp= ModusCreateApp.new(@driver)
 
-    #Waiting to Page to be loaded and for Search to visible to Webdriver for 10 seconds
-    wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
-    wait.until {@Upwork.searchbar}
+    #Waiting to Page to be loaded and for Search to visible to Webdriver for 2 seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 2) # seconds
+    wait.until {@ModusCreateApp.budget_label}
 
+    #Adding new records and verifying it is being inserted
+     @ModusCreateApp.description.send_keys 'TEST2'
+     @ModusCreateApp.value.send_keys '12'
+     @ModusCreateApp.btn_submit.click
+    puts 'Records has been added successfully'
 
-    #Sending 'QA' work and Pressing Enter in SearchBar
-    @Upwork.searchbar.send_keys 'QA'
-    @Upwork.searchbar.send_keys :enter
-    puts 'QA word is typed into SearchBar '
+  end
 
+  def test_verifying_working_balance
 
-     puts 'Waiting for Page to Load for searching the results '
-     wait.until {@Upwork.headerToApear}
+    #Created object to Interact with ModusCreateApp Page Object
+    @ModusCreateApp= ModusCreateApp.new(@driver)
+    #Waiting to Page to be loaded and for Search to visible to Webdriver for 2 seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 2) # seconds
+    wait.until {@ModusCreateApp.budget_label}
 
-     puts 'Displaying Freelance Skillset'
+    # removing all non-digit characters and changing from dollar currency to numberic value for manupulations
+    total_inflow =  @ModusCreateApp.total_inflow.text.gsub(/[^\d\.-]/,'').to_f
+    total_outflow = @ModusCreateApp.total_outflow.text.gsub(/[^\d\.-]/,'').to_f
+    working_balance = @ModusCreateApp.working_balance.text.gsub(/[^\d\.-]/,'').to_f
 
-     #storing info given on the 1st page of search results
+    assert_equal((total_inflow-total_outflow).round(), working_balance.round())
+    puts 'verified: working_balance calculation is correct'
 
-    skills_ds = []
-     freelance_skillset={}
+  end
 
-    size = @Upwork.SectionSize.size
+  def test_verifying_working_balance_failed_case
 
-     begin
-       for i in (1...size)
+    #Created object to Interact with ModusCreateApp Page Object
+    @ModusCreateApp= ModusCreateApp.new(@driver)
+    #Waiting to Page to be loaded and for Search to visible to Webdriver for 2 seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 2) # seconds
+    wait.until {@ModusCreateApp.budget_label}
 
-         #In case no No skills are available with General pattern, Exception handing is done
-         begin
-           limit = 4
-           for n in (1...limit)
-             skills_i = @Upwork.skillsIJ(i,n).text
-             skills_ds << skills_i
-           end
-         rescue Exception => e
-         end
+    # removing all non-digit characters and changing from dollar currency to numberic value for manupulations
+    total_inflow =  @ModusCreateApp.total_inflow.text.gsub(/[^\d\.-]/,'').to_f
+    total_outflow = @ModusCreateApp.total_outflow.text.gsub(/[^\d\.-]/,'').to_f
+    working_balance = @ModusCreateApp.working_balance.text.gsub(/[^\d\.-]/,'').to_f
 
-         freelance_skillset = {Freelance_Details: {Title: @Upwork.title_fl(i).attribute('title'), Overview: @Upwork.overview(i).text, Skills: skills_ds}}
-         skills_ds = []
-         puts freelance_skillset, "\n"
-
-       end
-       rescue Exception => e
-     end
-
-    #Clicking on Freelance photograph
-
-    @Upwork.photo.click
-    puts 'Going into Freelancer Profile'
-
-
-    #Validating the Title and overview Stored in Hash which have been collection above
-
-    assert_equal(freelance_skillset[:Freelance_Details][:Title], @Upwork.matched_name.text)
-    puts 'Checking that each attribute value is equal to one of those stored in the structure created'
-
-    assert_equal(freelance_skillset[:Freelance_Details][:Overview], @Upwork.matched_overview.text)
-    puts 'Checking whether at least one attribute contains `<keyword>`'
+    #Fail Case - intentionally
+    assert_equal((total_inflow + total_outflow).round(), working_balance.round())
+    puts 'verifying fail case that working_balance checked shows incorrect result in test_execution'
 
   end
 
